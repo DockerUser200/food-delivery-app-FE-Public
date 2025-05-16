@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Restaurant } from 'src/app/Shared/models/Restaurant';
 import { RestaurantService } from '../service/restaurant.service';
 import { Router } from '@angular/router';
@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   templateUrl: './restaurant-listing.component.html',
   styleUrls: ['./restaurant-listing.component.css']
 })
-export class RestaurantListingComponent {
+export class RestaurantListingComponent  implements OnInit {
 
-  public restaurantList: Restaurant[];
+  public restaurantList: Restaurant[] = [];
 
   ngOnInit() {
     this.getAllRestaurants();

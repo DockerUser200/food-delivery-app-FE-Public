@@ -1,13 +1,13 @@
 
-<div class="restaurant-details">
+<div class="restaurant-details" *ngIf="foodItemResponse">
     <div class="restaurant-header">
-        <h1>{{foodItemResponse.restaurant.name}}</h1>
+        <h1>{{foodItemResponse.restaurant?.name}}</h1>
         <button class="checkout-button" (click)="onCheckOut()">
             <i class="fas fa-shopping-cart"></i>
             Checkout
         </button>
     </div>
-    <p>{{foodItemResponse.restaurant.restaurantDescription}}</p>
+    <p>{{foodItemResponse.restaurant?.restaurantDescription}}</p>
 
     <h2>Food Menu</h2>
     <div class="food-list">
